@@ -1,12 +1,12 @@
 //Task1-->Створити функцію, яка за номером місяця повертає його назву.
-let monthNum = parseInt(prompt('Enter the month number', ''))
+let monthNum = parseInt(prompt('Enter the month number', ''))    Цю перевірку треба було робити у функції
 if (monthNum < 1 || monthNum > 12)
     alert('You write a wrong month number')
 
 let arrMonth = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 function returnMonNum(monthNum) {
     let a = arrMonth[monthNum - 1];
-    document.write(`Your month is ${a}`);
+    document.write(`Your month is ${a}`);      Не виводьте у функціях!!!
 }
 returnMonNum(monthNum)
 
@@ -28,12 +28,12 @@ let arrNum = []
 for (let i = 0; i < 4; i++) {
     arrNum[i] = parseInt(prompt('Enter the numbers',"4")) 
 }
-var sum = 0
+var sum = 0           Цю ініціалізацію треба було зробити у функції
 function getSum(arrNum){
     for (let i = 0; i < arrNum.length; i++) {
         sum += arrNum[i] 
     }
-    document.write(`Sum is ${sum}`)
+    document.write(`Sum is ${sum}`)   Функція повинна результат повертати, а не виводити 
     document.write(`<br></br>`)
 }
 getSum(arrNum)
